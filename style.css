@@ -856,3 +856,8 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem) !important;
+  line-height: 1.25 !important;
+  word-break: break-word !important;
+}
