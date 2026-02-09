@@ -329,65 +329,70 @@
 </body>
 </html>
 <!-- Contact Section -->
-<section id="contact" class="ap-contact-section">
-    <div class="ap-container">
-        <div class="ap-section-header">
-            <h2 class="ap-main-heading">Have Any Questions? Let’s Connect</h2>
-            <p class="ap-subheading">Fill out the form below and I’ll get back to you as soon as possible.</p>
-            <div class="ap-accent-line"></div>
+<section id="contact">
+  <div class="ap-contact-card">
+
+    <h2 class="ap-contact-title">Contact for Queries</h2>
+    <p class="ap-contact-subtitle">
+      Please submit your query using the form below.
+    </p>
+
+    <form
+      class="ap-contact-form"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdSCeemIqJ1omWCgjCfHIK-eFF5LdBMcyVIP1YYd-RREr_mMw/formResponse"
+      method="POST"
+      target="_blank"
+    >
+
+      <div class="ap-form-grid">
+
+        <div class="ap-form-group">
+          <label>Full Name</label>
+          <input
+            type="text"
+            name="entry.1756858558"
+            placeholder="Enter your full name"
+            required
+          >
         </div>
 
-        <div class="ap-contact-card">
-            <form id="apContactForm" class="ap-form">
-                <div class="ap-form-grid">
-                    <div class="ap-form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="e.g. John Doe" required>
-                        <small class="ap-helper-text">Enter your legal or preferred name.</small>
-                    </div>
-
-                    <div class="ap-form-group">
-                        <label for="emailAddress">Email Address</label>
-                        <input type="email" id="emailAddress" name="emailAddress" placeholder="email@example.com" required>
-                        <small class="ap-helper-text">I will use this to respond to you.</small>
-                    </div>
-                </div>
-
-                <div class="ap-form-group">
-                    <label for="subject">Subject</label>
-                    <select id="subject" name="subject" required>
-                        <option value="" disabled selected>Select a purpose</option>
-                        <option value="General Query">General Query</option>
-                        <option value="Feedback">Feedback</option>
-                        <option value="Information Request">Information Request</option>
-                    </select>
-                </div>
-
-                <div class="ap-form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="How can I help you today?" required></textarea>
-                </div>
-
-                <div class="ap-btn-wrapper">
-                    <button type="submit" id="apSubmitBtn" class="ap-submit-btn">
-                        <span class="btn-text">Send Message</span>
-                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-                    </button>
-                </div>
-            </form>
-
-            <!-- Success Message Container -->
-            <div id="apSuccessMessage" class="ap-success-container" style="display: none;">
-                <div class="ap-success-content">
-                    <i class="fas fa-check-circle ap-success-icon"></i>
-                    <h3>Message Sent!</h3>
-                    <p>Thank you for reaching out. Your message has been received.</p>
-                    <button type="button" class="ap-reset-btn" onclick="resetContactForm()">Send Another Message</button>
-                </div>
-            </div>
+        <div class="ap-form-group">
+          <label>Email Address</label>
+          <input
+            type="email"
+            name="entry.13123794"
+            placeholder="Enter your email"
+            required
+          >
         </div>
-    </div>
+
+        <div class="ap-form-group ap-full-width">
+          <label>Your Message</label>
+          <textarea
+            name="entry.85009717"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+        </div>
+
+      </div>
+
+      <div class="ap-btn-wrapper">
+        <button type="submit" class="ap-submit-btn">
+          Submit Query <span class="btn-icon">➜</span>
+        </button>
+      </div>
+
+    </form>
+
+    <p class="ap-footer-note">
+      Designed by <strong>Rushikesh Kene</strong>
+    </p>
+
+  </div>
 </section>
+
+
 
 <!-- Professional Footer -->
 <footer class="ap-minimal-footer">

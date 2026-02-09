@@ -150,17 +150,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Function to reset the form view
-function resetContactForm() {
-    const contactForm = document.getElementById('apContactForm');
-    const successMessage = document.getElementById('apSuccessMessage');
-    const btn = document.getElementById('apSubmitBtn');
-    const btnText = btn.querySelector('.btn-text');
+let submitted = false;
 
-    contactForm.reset();
-    btnText.textContent = "Send Message";
-    btn.style.opacity = "1";
-    btn.style.pointerEvents = "auto";
-    
-    successMessage.style.display = 'none';
-    contactForm.style.display = 'block';
+window.addEventListener("load", () => {
+  const iframe = document.querySelector("iframe[name='hidden_iframe']");
+  if (!iframe) return;
+
+  iframe.onload = () => {
+    if (submitted) {
+      document.getElementById("success-msg").style.display = "block";
+      document.querySelector(".contact-form").reset();
+      submitted = false;
+    }
+  };
+});
+
 }
